@@ -1,0 +1,108 @@
+.reviews
+  background-color: $bg-lightgrey
+  position: relative
+  color: #000000
+  &::after
+    content: ""
+    position: absolute
+    width: 0
+    height: 0
+    bottom: -35px
+    border-right: 50vw solid transparent
+    border-left: 50vw solid transparent
+    border-bottom: none
+    border-top: 35px solid $bg-lightgrey
+  &__wrapper
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    justify-content: center
+    width: 84%
+    margin: 0 auto
+    padding-top: 30px
+    padding-bottom: 30px
+    text-align: center
+  &__title
+    margin: 0
+    font-size: 30px
+    line-height: 30px
+    font-weight: bold
+    text-transform: uppercase
+  &__write
+    display: none
+  &__list
+    margin-top: 35px
+  &__item
+    display: flex
+    align-items: flex-start
+    margin: 0
+    margin-bottom: 30px
+  &__author-picture
+    min-width: 50px
+    margin: 0
+    margin-right: 20px
+  &__text
+    text-align: left
+  &__author-name
+    font-size: 24px
+    line-height: 27px
+    font-weight: bold
+    font-style: normal
+  &__author-text
+    margin: 0
+    margin-top: 15px
+  &__button
+    display: none
+  &__toggles
+    display: flex
+    justify-content: center
+    margin: 0
+  & .slider__toggle--active::after
+    background-color: #353535
+
+@media (min-width: $tablet-width)
+  .reviews
+    &__wrapper
+      display: flex
+      flex-direction: row
+      justify-content: space-between
+    &__write
+      display: inline-block
+    &__title
+      align-self: center
+      font-size: 40px
+      line-height: 40px
+    &__list
+      width: 100%
+    &__item
+      margin-bottom: 0px
+      padding: 30px 30px
+      border: 1px solid #e5ddd5
+    &__author-picture
+      min-width: 80px
+      margin: 0
+      margin-right: 30px
+    &__author-image
+      background-color: $bg-lightgrey
+      border-radius: 50%
+    &__toggles
+      z-index: 10
+      margin-top: -10px
+      padding: 0 25px 0 15px
+      min-width: 130px
+      height: 10px
+      background-color: $bg-lightgrey
+
+@media (min-width: $desktop-width)
+  .reviews
+    &__item
+      position: relative
+      min-height: 160px
+      padding: 0
+    &__author-picture
+      height: 160px
+      margin-right: 0px
+    &__author-image
+      border-radius: 0
+    &__text
+      margin: 35px 75px

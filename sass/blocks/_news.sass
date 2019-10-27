@@ -1,0 +1,122 @@
+.news
+  background-color: $bg-lightgrey
+  color: #000000
+  border-bottom: 1px solid #e5ddd5
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    width: 84%
+    margin: 0 auto
+    padding-top: 80px
+    padding-bottom: 30px
+    text-align: center
+  &__title
+    margin: 0
+    font-size: 30px
+    line-height: 30px
+    font-weight: bold
+    text-transform: uppercase
+  &__list
+    display: flex
+    flex-direction: column
+    margin: 0
+    padding: 0
+    list-style: none
+  &__item
+    display: flex
+    justify-content: space-between
+    margin-top: 20px
+    padding-bottom: 20px
+    border-bottom: 1px solid #e5ddd5
+    &:nth-child(n+2)
+      border-bottom: none
+    &:nth-child(n+3)
+      display: none
+    &:hover
+      & .news__link
+        color: #826550
+        text-decoration: underline
+      & .news__date
+        background-color: #826550
+      & .news__date::after
+        border-top-color: #826550
+    &:active
+      & .news__link
+        color: #6a4d38
+        text-decoration: underline
+      & .news__date
+        background-color: #6a4d38
+        color: rgba(#ffffff, 0.3)
+      & .news__date::after
+        border-top-color: #6a4d38
+  &__date
+    display: block
+    position: relative
+    flex-grow: 0
+    flex-shrink: 0
+    box-sizing: border-box
+    width: 60px
+    height: 60px
+    margin-top: 10px
+    padding: 10px 12px 0
+    background-color: #000000
+    color: #ffffff
+    font-size: 16px
+    &::after
+      content: ""
+      position: absolute
+      width: 0
+      height: 0
+      bottom: -42px
+      left: 0
+      border: 30px solid transparent
+      border-top: 12px solid #000000
+  &__day
+    font-size: 30px
+    line-height: 30px
+    text-align: center
+  &__month
+    display: block
+    margin-top: -13px
+  &__text
+    margin: 0
+    margin-left: 20px
+    text-align: left
+    font-size: 18px
+    line-height: 27px
+  &__link
+    text-decoration: none
+    color: #000000
+  
+@media (min-width: $tablet-width)
+  .news
+    &__wrapper
+      justify-content: space-between
+    &__title
+      align-self: center
+      font-size: 40px
+      line-height: 40px
+      order: 1
+    &__list
+      flex-direction: row
+      order: 3
+      margin-top: 50px
+    &__item
+      width: 50%
+      margin-top: 0px
+      border-bottom: none
+      &:nth-child(1)
+        margin-right: 45px;
+    &__to-all
+      order: 2
+
+@media (min-width: $desktop-width)
+  .news
+    &__title
+      padding-left: 80px
+    &__item
+      width: 33%
+      margin-right: 40px
+      &:nth-child(3)
+        display: flex
