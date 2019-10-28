@@ -1627,6 +1627,9 @@ img {
     width: 170px;
     margin-left: auto;
   }
+  .copyright__link {
+    padding: 12px 0;
+  }
   .social__title {
     display: block;
     margin-bottom: 15px;
