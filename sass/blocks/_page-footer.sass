@@ -1,0 +1,172 @@
+.page-footer
+  &__wrapper
+    display: flex
+    flex-direction: column
+    align-items: center
+    margin: 0 auto
+    padding-top: 70px
+    text-align: center
+  &__contacts
+    width: 85%
+  &__social
+    width: 100%
+    min-height: 100px
+  &__copyright
+    width: 85%
+    padding-top: 35px
+    padding-bottom: 25px
+
+.contacts
+  font-size: 18px
+  line-height: 24px
+  &__title
+    font-weight: bold
+  &__text
+    margin: 0
+  &__phone
+    display: block
+    width: 300px
+    margin: 0 auto
+    margin-top: 25px
+    padding: 20px 0
+    font-weight: bold
+    color: #ffffff
+    border: 1px solid #3e3e3e
+    text-decoration: none
+    &:hover
+      border-color: #545454
+    &:active
+      color: rgba(#fff, 0.3)
+      background-color: #252525
+      border-color: #252525
+    &-mobile
+      display: none
+    
+.social
+  &__title
+    display: none
+  &__list
+    display: flex
+    width: 300px
+    height: 100px
+    margin: 0 auto
+    padding: 0
+    list-style: none
+  &__item
+    width: 100px
+  &__link
+    position: relative
+    &::after
+      content: ""
+      position: absolute
+      width: 100px
+      height: 100px
+      top: 0
+      left: -50px
+      background-repeat: no-repeat
+      background-position: center
+      border: 1px solid #3e3e3e
+    &:hover::after
+      border-color: #545454
+    &:active::after
+      border-color: #252525
+      background-color: #252525
+      opacity: 0.3
+    &--vkontakte::after
+        background-image: url('../img/icon-vk.png')
+    &--facebook::after
+      background-image: url('../img/icon-fb.png')
+    &--instagram::after
+      background-image: url('../img/icon-in.png')
+
+.copyright
+  &__text
+    display: block
+    margin-bottom: 20px
+    font-weight: normal
+  &__link
+    width: 300px
+    margin: 0 auto
+    color: #fff
+    border: 1px solid #3e3e3e
+    &:hover
+      border-color: #545454
+    &:active
+      color: rgba(#fff, 0.3)
+      background-color: #252525
+      border-color: #252525
+
+@media (min-width: $tablet-width)
+  .page-footer
+    &__wrapper
+      flex-direction: row
+      flex-wrap: wrap
+      justify-content: space-between
+      padding: 55px 65px
+    &__contacts
+      width: 60%
+      order: 1
+    &__social
+      margin-top: 50px
+      order: 3
+    &__copyright
+      width: auto
+      padding: 0
+      order: 2
+    
+  .contacts
+    text-align: left
+    &__title
+      text-transform: uppercase
+    &__phone
+      width: auto
+      margin: 0
+      padding: 0
+      border: none
+      font-weight: normal
+      &-mobile
+        display: inline
+
+  .copyright
+    &__link
+      width: 160px
+
+@media (min-width: $desktop-width)
+  .page-footer
+    &__wrapper
+      padding: 60px 120px
+      align-items: flex-start
+    &__contacts
+      width: 33.3%
+      order: 1
+    &__social
+      width: 33.3%
+      margin-top: 0
+      order: 2
+    &__copyright
+      width: 33.3%
+      padding: 0
+      order: 3
+
+  .copyright
+    &__block
+      width: 170px
+      margin-left: auto
+
+  .social
+    &__title
+      display: block
+      margin-bottom: 15px
+      font-weight: normal
+    &__list
+      justify-content: center
+    &__item
+      width: 50px
+      margin-right: 5px
+      &:last-child
+        margin-right: 0
+    &__link
+        &::after
+          width: 50px
+          height: 50px
+          left: -25px
