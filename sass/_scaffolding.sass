@@ -65,7 +65,8 @@ img
     position: relative
   &__toggle
     position: relative
-    margin-right: 20px
+    margin-right: 40px
+    @include button-reset
     &:focus
       outline: none
     &:focus::after
@@ -80,6 +81,8 @@ img
       transform: rotate(45deg)
       background-color: transparent
       border: 1px solid #a5a5a5
+    &:hover::after
+      border: 1px solid #d5c9bd
     &:last-child
       margin-right: 0
     &--active::after

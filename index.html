@@ -169,32 +169,34 @@
 			<div class="reviews__wrapper slider">
 				<h2 class="reviews__title">Отзывы о нас</h2>
 				<a href="#" class="reviews__write button">Оставить свой</a>
-				<div class="reviews__list slider__list">
-					<div class="reviews__button-prev">
-						<button class="reviews__prev" type="button">Предыдущий отзыв</button>
-					</div>
-					<blockquote class="reviews__item slider__item">
-						<p class="reviews__author-picture">
-							<picture>
-									<source media="(min-width: 1200px)" srcset="img/review-1.jpg">
-									<source media="(min-width: 768px)" srcset="img/review-1-tablet.jpg">
-									<img class="reviews__author-image" src="img/review-1-mobile.jpg" alt="Фото Трэвиса Баркера">
-							</picture>
-						</p>
-						<div class="reviews__text">
-							<cite class="reviews__author-name">Трэвис Баркер</cite>
-							<p class="reviews__author-text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+				<div class="reviews__block">
+						<div class="reviews__button-prev">
+							<button class="reviews__prev" type="button"><span class="visually-hidden">Предыдущий отзыв</span></button>
 						</div>
+					<div class="reviews__list slider__list">
+						<blockquote class="reviews__item slider__item">
+							<p class="reviews__author-picture">
+								<picture>
+										<source media="(min-width: 1200px)" srcset="img/review-1.jpg">
+										<source media="(min-width: 768px)" srcset="img/review-1-tablet.jpg">
+										<img class="reviews__author-image" src="img/review-1-mobile.jpg" alt="Фото Трэвиса Баркера">
+								</picture>
+							</p>
+							<div class="reviews__text">
+								<cite class="reviews__author-name">Трэвис Баркер</cite>
+								<p class="reviews__author-text">Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!</p>
+							</div>
 						</blockquote>
-					<div class="reviews__button-next">
-						<button class="reviews__next" type="button">Следующий отзыв</button>
 					</div>
-					<p class="reviews__toggles slider__toggles">
-						<button class="slider__toggle slider__toggle--active" type="button"><span class="visually-hidden">1</span></button>
-						<button class="slider__toggle" type="button"><span class="visually-hidden">2</span></button>
-						<button class="slider__toggle" type="button"><span class="visually-hidden">3</span></button>
-					</p>
+					<div class="reviews__button-next">
+						<button class="reviews__next" type="button"><span class="visually-hidden">Следующий отзыв</span></button>
+					</div>
 				</div>
+				<p class="reviews__toggles slider__toggles">
+					<button class="slider__toggle slider__toggle--active" type="button"><span class="visually-hidden">1</span></button>
+					<button class="slider__toggle" type="button"><span class="visually-hidden">2</span></button>
+					<button class="slider__toggle" type="button"><span class="visually-hidden">3</span></button>
+				</p>
 			</div>
 		</section>
 	</main>
