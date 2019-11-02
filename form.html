@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/normalize.css">
+</head>
+<body>
+	<header class="page-header">
+		<a class="page-header__logo">
+			<picture>
+					<source media="(min-width: 1200px)" srcset="img/logotype-desktop.png">
+				<source media="(min-width: 768px)" srcset="img/logotype-tablet.png">
+				<img src="img/logotype-mobile.png" width="226" height="30" alt="Барбершоп Бородинский">
+			</picture>
+		</a>
+		<nav class="main-nav main-nav--closed main-nav--nojs">
+			<button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+			<div class="main-nav__wrapper">
+				<ul class="main-nav__list site-list">
+					<li class="site-list__item site-list__item--active">
+						<a>Главная</a>
+					</li>
+					<li class="site-list__item">
+						<a href="photo.html">Наши работы</a>
+					</li>
+					<li class="site-list__item">
+						<a href="form.html">Записаться</a>
+					</li>
+					<li class="site-list__item">
+						<a href="#">Контакты</a>
+					</li>
+					<li class="site-list__item">
+						<a href="#">HTML Academy</a>
+					</li>
+				</ul>
+				<ul class="main-nav__list user-list">
+					<li class="user-list__item">
+						<a href="login.html" class="user-list__login">
+							<svg class="user-list__login-icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+							<polygon points="0 7 7.01 7 7.01 4.06 10.96 8.01 7.01 11.91 7.01 9.06 0 9.02 0 7"/>
+							<polygon points="7.01 0 7.01 2 14.03 2 14.03 13.99 7.01 13.99 7.01 16 16 16 16 0 7.01 0"/>
+							</svg>
+							Войти
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<main class="inner-page">
+    <div class="inner-page__wrapper">
+      <h2 class="inner-page__title">Запись на стрижку</h2>
+      <a href="index.html" class="button inner-page__to-main">На главную</a>
+      <form class="inner-page__form form" action="#">
+        <fieldset class="form__name-block">
+          <div class="form__name-block-wrapper">
+            <input class="form__input-text" type="text" placeholder="Фамилия">
+            <input class="form__input-text" type="text" placeholder="Имя">
+            <input class="form__input-text" type="text" placeholder="Отчество">
+          </div>
+        </fieldset>
+        <fieldset class="form__contact-block">
+          <div class="form__contact-block-wrapper">
+            <input class="form__input-contact" type="tel" placeholder="Контактный телефон">
+            <input class="form__input-contact" type="email" placeholder="Контактный e-mail">
+          </div>
+        </fieldset>
+        <fieldset class="form__comment-block">
+          <textarea  class="form__input-textarea" placeholder="Доп. информация для мастера"></textarea>
+        </fieldset>
+        <fieldset class="form__bread-block bread-block">
+          <legend class="bread-block__title">Выберите модель бороды:</legend>
+          <ul class="bread-block__list">
+              <li class="bread-block__item"><input class="bread-block__input" type="radio" id="beard-admiral" name="type-beard" value="admiral" checked><label class="bread-block__label bread-block__label--admiral" for="beard-admiral">Адмирал</label></li>
+              <li class="bread-block__item"><input class="bread-block__input" type="radio" id="beard-lesorub" name="type-beard" value="lesorub"><label class="bread-block__label bread-block__label--lesorub" for="beard-lesorub">Лесоруб</label></li>
+              <li class="bread-block__item"><input class="bread-block__input" type="radio" id="beard-polyarnik" name="type-beard" value="polyarnik"><label class="bread-block__label bread-block__label--polyarnik" for="beard-polyarnik">Полярник</label></li>
+              <li class="bread-block__item"><input class="bread-block__input" type="radio" id="beard-boyarin" name="type-beard" value="boyarin"><label class="bread-block__label bread-block__label--boyarin" for="beard-boyarin">Боярин</label></li>
+              <li class="bread-block__item"><input class="bread-block__input" type="radio" id="beard-mudrec" name="type-beard" value="mudrec"><label class="bread-block__label bread-block__label--mudrec" for="beard-mudrec">Мудрец</label></li>
+          </ul>
+        </fieldset>
+        <fieldset class="form__services-block services-block">
+          <legend class="services-block__title">Дополнительные услуги:</legend>
+          <ul class="services-block__list">
+            <li class="services-block__item"><input class="services-block__input" type="checkbox" id="tint-beard" value="tint-beard" checked><label class="services-block__label" for="tint-beard">Подкрасить бороду</label></li>
+            <li class="services-block__item"><input class="services-block__input" type="checkbox" id="wind-mustache" value="wind-mustache" checked><label class="services-block__label" for="wind-mustache">Накрутить усы</label></li>
+            <li class="services-block__item"><input class="services-block__input" type="checkbox" id="comb-beard" value="comb-beard"><label class="services-block__label" for="comb-beard">Причесать бороду</label></li>
+            <li class="services-block__item"><input class="services-block__input" type="checkbox" id="trim-temple" value="trim-temple"><label class="services-block__label" for="trim-temple">Подровнять виски</label></li>
+            <li class="services-block__item"><input class="services-block__input" type="checkbox" id="remore-gray-hair" value="remore-gray-hair"><label class="services-block__label" for="remore-gray-hair">Убрать седину</label></li>
+            <li class="services-block__item"><input class="services-block__input" type="checkbox" id="polish-bald-head" value="polish-bald-head"><label class="services-block__label" for="polish-bald-head">Отполировать лысину</label></li>
+          </ul> 
+        </fieldset>
+        <button class="button form__submit-button" type="submit">Отправить заявку</button>
+      </form>
+    </div>
+  </main>
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <div class="page-footer__contacts contacts">
+        <b class="contacts__title">Барбершоп "Бородинский"</b>
+        <p class="contacts_text">
+          г. Санкт-Петербург, ул. Большая Конюшенная, 19/8
+          <a href="tel:+78125556666" class="contacts__phone">
+            <span class="contacts__phone-mobile">Тел.:</span> +7 (812) 555-66-66
+          </a>
+        </p>
+      </div>
+      <div class="page-footer__social social">
+        <b class="social__title">Давайте дружить!</b>
+        <ul class="social__list">
+          <li class="social__item">
+            <a href="#" class="social__link social__link--vkontakte"><span class="visually-hidden">Мы в Вконтакте</span></a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--facebook"><span class="visually-hidden">Мы в Facebook</span></a>
+          </li>
+          <li class="social__item">
+            <a href="#" class="social__link social__link--instagram"><span class="visually-hidden">Мы в Instagram</span></a>
+          </li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright copyright">
+        <div class="copyright__block">
+          <b class="copyright__text">Разработано:</b>
+          <a href="#" class="button copyright__link">HTML Academy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
